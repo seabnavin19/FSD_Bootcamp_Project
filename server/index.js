@@ -7,6 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+//http://localhost:4000/api/MajorsInfo
 const Information = require('./routes/api/Information');
 
 app.use('/api/MajorsInfo', Information);
