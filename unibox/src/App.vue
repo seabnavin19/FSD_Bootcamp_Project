@@ -1,30 +1,23 @@
 <template>
-  <div>
+  <div id="app">
     <Navbar/>
-    <Body/>
+    <router-view/>
+
     <Footer/>
   </div>
 </template>
 
 <script>
-import Body from './components/Body.vue';
-import Navbar from './components/Navbar.vue';
-import Footer from './components/Footer.vue';
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+
 
 export default {
-  name: 'App',
-  components: {
-    Body,
+  name:"app",
+  components:{
     Navbar,
     Footer
   }
 }
 </script>
 
-<style>
-#app {
-  background-image: url('./assets/Info_page.jpg');
-  background-size: cover;
-  height: 445px;
-}
-</style>
