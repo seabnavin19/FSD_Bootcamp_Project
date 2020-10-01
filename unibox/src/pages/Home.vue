@@ -17,7 +17,7 @@
     >
       <div class="col col-6">
         <p
-          class="text-black font-weight-bold text-right"
+          class="text-dark font-weight-bold text-right"
           style="font-size: 30px; margin-top: -100px"
         >
           Information in your hand...!
@@ -53,7 +53,8 @@ export default {
 .homepage {
   max-width: 100%;
   background-size: cover;
-  background-image: url("https://s3.amazonaws.com/stockfreedom/wp-content/uploads/2018/02/23164944/ti01104994-1560x1040.jpg");
+  /* background-image: url("https://s3.amazonaws.com/stockfreedom/wp-content/uploads/2018/02/23164944/ti01104994-1560x1040.jpg"); */
+  background-image: url('../assets/Home_page.jpg');
   /* background-repeat: no-repeat; */
   height: 100%;
 }
