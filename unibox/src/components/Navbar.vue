@@ -1,31 +1,41 @@
 <template>
-<div>
-  <b-navbar toggleable type="light" variant="white" id="line">
-    <b-navbar-brand  id="h12" href="#">Unibox</b-navbar-brand>
-      <b-navbar id="style" style="padding-right:40px;">
-        <b-navbar-item style="padding-right:60px;" href="#">FAQ</b-navbar-item>
-        <b-navbar-item style="padding-right:60px;" href="#">About Us</b-navbar-item>
-        <b-navbar-item style="padding-right:60px;" href="#">Download</b-navbar-item>
-      </b-navbar>
-  </b-navbar>
-</div>
+  <div>
+    <b-navbar toggleable="lg" type="light" variant="white" id="nav_shadow">
+
+      <b-navbar-brand href="#" id="site_name" class="pl-3">Unibox</b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <b-navbar-nav id="text_style" class="pr-5">
+            <b-nav-item href="#" class="px-3" right>FAQ</b-nav-item>
+            <b-nav-item href="#" class="px-3" right>About</b-nav-item>
+            <b-nav-item href="#" class="px-3" right>Download</b-nav-item>
+          </b-navbar-nav>
+        </b-navbar-nav>
+      </b-collapse>
+
+    </b-navbar>
+  </div>
 </template>
+
 <style>
-#h12{
+#site_name{
   font: italic normal bold 35px/42px Lato;
   letter-spacing: 0px;
   color: #707070;
   opacity: 1;
 }
-#style{
+#text_style{
   text-align: left;
   font: normal normal bold 15px/28px Lato;
   letter-spacing: 0px;
   color: #707070;
   opacity: 1;
 }
-#line {
+#nav_shadow {
     box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
 }
-
 </style>

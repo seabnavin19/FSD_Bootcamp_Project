@@ -1,54 +1,58 @@
 <template>
-<div id="app">
-  <div id="school">NIPTICT</div>
-  <b-container class="w-50 mx-auto mt-5 p-5">
-    <div class="accordion" role="tablist">
-      
-      <b-card no-body class="mb-1">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle.accordion-1  class="mr-2">About University</b-button>
-        </b-card-header>
-        <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
-          <b-card-body>
-            <b-card-text>{{ aboutUni }}</b-card-text>
-          </b-card-body>
-        </b-collapse>
-      </b-card>
+  <div id="app_bg">
+    <b-container>
+      <div id="uni_name" class="py-5 ml-5">NIPTICT</div>
+    </b-container>
+    
 
-      <b-card no-body class="mb-1">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle.accordion-2 class="mr-2">Program Overview</b-button>
-        </b-card-header>
-        <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-          <b-card-body>
-            <b-card-text>{{ program }}</b-card-text>
-          </b-card-body>
-        </b-collapse>
-      </b-card>
+    <b-container class="w-50 mx-auto mt-5 pb-5">
+      <div class="accordion" role="tablist">
+        
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-1  class="mr-2">About University</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ aboutUni }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
 
-      <b-card no-body class="mb-1">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle.accordion-3 class="mr-2">Career Pathway</b-button>
-        </b-card-header>
-        <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-          <b-card-body>
-            <b-card-text>{{ career }}</b-card-text>
-          </b-card-body>
-        </b-collapse>
-      </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-2 class="mr-2">Program Overview</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ program }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
 
-      <b-card no-body class="mb-1">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle.accordion-4 class="mr-2">Contact</b-button>
-        </b-card-header>
-        <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
-          <b-card-body>
-            <b-card-text>{{ contact }}</b-card-text>
-          </b-card-body>
-        </b-collapse>
-      </b-card>
-    </div>
-  </b-container>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-3 class="mr-2">Career Pathway</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ career }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-button block v-b-toggle.accordion-4 class="mr-2">Contact</b-button>
+          </b-card-header>
+          <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <b-card-text>{{ contact }}</b-card-text>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+      </div>
+    </b-container>
   </div>
 </template>
 
@@ -85,20 +89,14 @@
 </script>
 
 <style>
-#school{
-  width: 167px;
-  height: 54px;
-  margin-top: 60px;
-  margin-left: 300px;
-  text-align: left;
-  font: normal normal bold 40px/48px Lato;
-  letter-spacing: 0px;
-  color: #707070;
-  opacity: 1;
-}
-#app {
-  background-image: url('../assets/Info_page.jpg');
-  background-size: cover;
-  
-}
+  #uni_name{
+    font: normal normal bold 40px/48px Lato;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+  }
+  #app_bg {
+    background-image: url('../assets/Info_page.jpg');
+    background-size: cover;
+  }
 </style>
