@@ -32,7 +32,7 @@
       </b-card-header>
       <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-          <b-card-text>{{ carrer }}</b-card-text>
+          <b-card-text>{{ career }}</b-card-text>
         </b-card-body>
       </b-collapse>
     </b-card>
@@ -69,7 +69,7 @@
           effective open content, and strong faculty-industry relationships, students will be prepared to demonstrate their knowledge to the greatest potential. 
           Our courses are continually revised to stay on top of trends in programming languages, application development technologies, libraries, and hardware.
           `,
-        carrer:`
+        career:`
         Web and mobile developer ,
         Database designer and administrator ,
         Project manager ,
@@ -80,7 +80,7 @@
         Email: info@niptict.edu.kh
         `
       }
-    }
+    },
   }
 </script>
 <style>

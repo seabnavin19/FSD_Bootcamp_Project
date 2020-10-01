@@ -1,14 +1,20 @@
 <template>
-    <div>
-        <Body/>    
-    </div>
+  <div>
+    <Navbar/>
+    <Body/> 
+    <Footer />
+  </div>
 </template>
 <script>
-import Body from './components/Body.vue'
+import Body from '../components/Body.vue'
+import Footer from '../components/Footer'
+import Navbar from "../components/Navbar";
 
 export default {
   components: {
-    Body
+    Body,
+    Footer,
+    Navbar
   }
 }
 

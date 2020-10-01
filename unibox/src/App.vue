@@ -1,22 +1,16 @@
 <template>
   <div>
-    <Navbar/>
-    <Body/>
-    <Footer/>
+    <UniInfo/>
   </div>
 </template>
 
 <script>
-import Body from './components/Body.vue';
-import Navbar from './components/Navbar.vue';
-import Footer from './components/Footer.vue';
+import UniInfo from './pages/UniInfo'
 
 export default {
   name: 'App',
   components: {
-    Body,
-    Navbar,
-    Footer
+    UniInfo
   }
 }
 </script>
