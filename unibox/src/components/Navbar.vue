@@ -1,25 +1,41 @@
 <template>
-    <div style="color:grey">
-        <nav class="navbar p-3" >
-          <a class="navbar-brand md-ml-4 d-md-inline font-weight-bold font-italic" href="/" style="color:grey; font-size:30px">Unibox</a>
-            <ul class="nav sm-justify-content-end md-justify-content-center" >
-              <li class="nav-item mr-3" >
-                <a class="navbar-brand disabled" href="#" style="color:grey">FAQ</a>
-              </li>
-              <li class="nav-item mr-3">
-                <a class="navbar-brand disabled " href="/about" style="color:grey">About Us</a>
-              </li>
-              <li class="nav-item mr-3" >
-                <a class="navbar-brand disabled " href="#" style="color:grey">Download</a>
-              </li>
-  
-            </ul>
-        </nav>
-    </div>
+  <div>
+    <b-navbar toggleable="lg" type="light" variant="white" id="nav_shadow">
 
+      <b-navbar-brand href="#" id="site_name" class="pl-3">Unibox</b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <b-navbar-nav id="text_style" class="pr-5">
+            <b-nav-item href="#" class="px-3" right>FAQ</b-nav-item>
+            <b-nav-item href="#" class="px-3" right>About</b-nav-item>
+            <b-nav-item href="#" class="px-3" right>Download</b-nav-item>
+          </b-navbar-nav>
+        </b-navbar-nav>
+      </b-collapse>
+
+    </b-navbar>
+  </div>
 </template>
+
 <style>
-  .navbar{
-    box-shadow: 0px 3px white;
-  }
+#site_name{
+  font: italic normal bold 35px/42px Lato;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+#text_style{
+  text-align: left;
+  font: normal normal bold 15px/28px Lato;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+#nav_shadow {
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+}
 </style>
