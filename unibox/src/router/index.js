@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../pages/Home.vue'
 import UniInfo from '../pages/UniInfo.vue'
+import ShowUni from '../pages/ShowUni.vue'
+import About from '../pages/About.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +17,16 @@ const routes = [
     path: '/uniInfo',
     name: 'Uniinfo',
     component: UniInfo
+  },
+  {
+    path: '/uni',
+    name: 'ShowUni',
+    component: ShowUni
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
   },
   // {
   //   path: '/about',
