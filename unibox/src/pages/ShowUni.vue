@@ -4,10 +4,9 @@
       <div id="uni_name" class="py-5">{{uniName}}</div>
     </b-container>
 
-    
     <b-container class="bv-example-row">
-        <b-row>
-            <b-col>
+        <b-row class="justify-content-md-left">
+            <b-col cols="12" md="auto">
                 <div>
                     <b-card
                         id="card_title"
@@ -17,7 +16,27 @@
                         img-top
                         tag="article"
                         style="max-width: 20rem;"
-                        class="mb-5 "
+                        class="mb-2 "
+                    >
+                        <b-card-text id="card_desc">
+                        {{aboutUni}}
+                        </b-card-text>
+
+                        <b-button href="#" variant="success">See more</b-button>
+                    </b-card>
+                </div>
+            </b-col>
+            <b-col cols="12" md="auto">
+                <div>
+                    <b-card
+                        id="card_title"
+                        :title="uniName"
+                        img-src="https://picsum.photos/600/300/?image=25"
+                        img-alt="Image"
+                        img-top
+                        tag="article"
+                        style="max-width: 20rem;"
+                        class="mb-2 "
                     >
                         <b-card-text id="card_desc">
                         {{aboutUni}}
@@ -28,7 +47,7 @@
                 </div>
             </b-col>
 
-            <b-col>
+            <b-col cols="12" md="auto">
                 <div>
                     <b-card
                         id="card_title"
@@ -38,7 +57,7 @@
                         img-top
                         tag="article"
                         style="max-width: 20rem;"
-                        class="mb-2"
+                        class="mb-2 "
                     >
                         <b-card-text id="card_desc">
                         {{aboutUni}}
@@ -51,7 +70,7 @@
 
             <div class="w-100"></div>
 
-            <b-col>
+            <b-col cols="12" md="auto">
                 <div>
                     <b-card
                         id="card_title"
@@ -61,7 +80,7 @@
                         img-top
                         tag="article"
                         style="max-width: 20rem;"
-                        class="mb-2"
+                        class="mb-2 "
                     >
                         <b-card-text id="card_desc">
                         {{aboutUni}}
@@ -72,7 +91,7 @@
                 </div>
             </b-col>
 
-            <b-col>
+            <b-col cols="12" md="auto">
                 <div>
                     <b-card
                         id="card_title"
@@ -82,7 +101,7 @@
                         img-top
                         tag="article"
                         style="max-width: 20rem;"
-                        class="mb-2"
+                        class="mb-2 "
                     >
                         <b-card-text id="card_desc">
                         {{aboutUni}}
@@ -92,6 +111,27 @@
                     </b-card>
                 </div>
             </b-col>
+            <b-col cols="12" md="auto">
+                <div>
+                    <b-card
+                        id="card_title"
+                        :title="uniName"
+                        img-src="https://picsum.photos/600/300/?image=25"
+                        img-alt="Image"
+                        img-top
+                        tag="article"
+                        style="max-width: 20rem;"
+                        class="mb-2 "
+                    >
+                        <b-card-text id="card_desc">
+                        {{aboutUni}}
+                        </b-card-text>
+
+                        <b-button href="#" variant="success">See more</b-button>
+                    </b-card>
+                </div>
+            </b-col>
+            
         </b-row>
     </b-container>
     <hr/>
