@@ -1,31 +1,100 @@
 <template>
   <div id="app_bg">
     <b-container>
-      <div id="uni_name" class="py-5">NIPTICT</div>
+      <div id="uni_name" class="py-5">{{uniName}}</div>
     </b-container>
 
-    <b-container>
-      <div>
-        <b-card
-            title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="mb-2"
-        >
-            <b-card-text>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-            </b-card-text>
+    
+    <b-container class="bv-example-row">
+        <b-row>
+            <b-col>
+                <div>
+                    <b-card
+                        id="card_title"
+                        :title="uniName"
+                        img-src="https://picsum.photos/600/300/?image=25"
+                        img-alt="Image"
+                        img-top
+                        tag="article"
+                        style="max-width: 20rem;"
+                        class="mb-5 "
+                    >
+                        <b-card-text id="card_desc">
+                        {{aboutUni}}
+                        </b-card-text>
 
-            <b-button href="#" variant="success">Go somewhere</b-button>
-        </b-card>
-</div>
+                        <b-button href="#" variant="success">See more</b-button>
+                    </b-card>
+                </div>
+            </b-col>
+
+            <b-col>
+                <div>
+                    <b-card
+                        id="card_title"
+                        :title="uniName"
+                        img-src="https://picsum.photos/600/300/?image=25"
+                        img-alt="Image"
+                        img-top
+                        tag="article"
+                        style="max-width: 20rem;"
+                        class="mb-2"
+                    >
+                        <b-card-text id="card_desc">
+                        {{aboutUni}}
+                        </b-card-text>
+
+                        <b-button href="#" variant="success">See more</b-button>
+                    </b-card>
+                </div>
+            </b-col>
+
+            <div class="w-100"></div>
+
+            <b-col>
+                <div>
+                    <b-card
+                        id="card_title"
+                        :title="uniName"
+                        img-src="https://picsum.photos/600/300/?image=25"
+                        img-alt="Image"
+                        img-top
+                        tag="article"
+                        style="max-width: 20rem;"
+                        class="mb-2"
+                    >
+                        <b-card-text id="card_desc">
+                        {{aboutUni}}
+                        </b-card-text>
+
+                        <b-button href="#" variant="success">See more</b-button>
+                    </b-card>
+                </div>
+            </b-col>
+
+            <b-col>
+                <div>
+                    <b-card
+                        id="card_title"
+                        :title="uniName"
+                        img-src="https://picsum.photos/600/300/?image=25"
+                        img-alt="Image"
+                        img-top
+                        tag="article"
+                        style="max-width: 20rem;"
+                        class="mb-2"
+                    >
+                        <b-card-text id="card_desc">
+                        {{aboutUni}}
+                        </b-card-text>
+
+                        <b-button href="#" variant="success">See more</b-button>
+                    </b-card>
+                </div>
+            </b-col>
+        </b-row>
     </b-container>
-    
-
-    
+    <hr/>
   </div>
 </template>
 
@@ -33,6 +102,7 @@
   export default {
     data() {
       return {
+        uniName: 'NIPTICT',
         aboutUni: `
           NIPTICT is a research and training institute founded by the Ministry of Posts 
           and Telecommunications of Cambodia (MPTC). Our mission is to develop highly qualified and committed professionals in the field of posts,
@@ -62,14 +132,24 @@
 </script>
 
 <style>
-  #uni_name{
-    font: normal normal bold 40px/48px Lato;
-    letter-spacing: 0px;
-    color: #707070;
-    opacity: 1;
-  }
-  #app_bg {
-    background-image: url('../assets/ShowUni_page.jpg');
-    background-size: cover;
-  }
+    #card_title{
+        font: normal normal bold 20px/24px Lato;
+        letter-spacing: 0px;
+        opacity: 1;
+    }
+    #card_desc{
+        font: normal normal 14px/18px Source Sans Pro;
+        letter-spacing: 0px;
+        opacity: 1;
+    }
+    #uni_name{
+        font: normal normal bold 40px/48px Lato;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+    }
+    #app_bg {
+        background-image: url('../assets/ShowUni_page.jpg');
+        background-size: cover;
+    }
 </style>
