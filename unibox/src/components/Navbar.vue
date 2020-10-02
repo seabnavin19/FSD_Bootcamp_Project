@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="light" variant="white" id="nav_shadow">
 
-      <b-navbar-brand href="#" id="site_name" class="pl-3">Unibox</b-navbar-brand>
+      <b-navbar-brand href="/" id="site_name" class="pl-3">Unibox</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

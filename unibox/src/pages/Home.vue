@@ -32,9 +32,7 @@
 </template>
 
 <script>
-
 import PostService from '../PostService'
-
 export default {
   name: "Home",
   components: {},
@@ -50,15 +48,6 @@ export default {
       this.error = err.message;
     }
   },
-  // async created() {
-  //   PostService
-  //     .getAllPosts()
-  //     .then(res => {
-  //       this.majors = res.data;
-  //       console.log(this.majors);
-  //     })
-  //     .catch(err => console.error(err));
-  // },
   methods:{
     changeRoute(event){
       if(event.target.value == 'Computer Science'){
@@ -79,9 +68,7 @@ export default {
 .homepage {
   max-width: 100%;
   background-size: cover;
-  /* background-image: url("https://s3.amazonaws.com/stockfreedom/wp-content/uploads/2018/02/23164944/ti01104994-1560x1040.jpg"); */
   background-image: url('../assets/Home_page.jpg');
-  /* background-repeat: no-repeat; */
   height: 500px;
 }
 .information_text {

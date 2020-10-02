@@ -14,7 +14,6 @@
                 >
                     <b-card
                         id="card_title"
-                        img-src="https://picsum.photos/600/300/?image=25"
                         img-alt="Image"
                         img-top
                         tag="article"
@@ -24,6 +23,7 @@
                         v-bind:item="universities"
                         v-bind:index="index"
                         v-bind:key="university._id"
+                        :img-src="university.Image"
                         :title="university.Name"
                        
                     >
