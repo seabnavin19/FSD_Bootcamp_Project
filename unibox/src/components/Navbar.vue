@@ -2,7 +2,11 @@
   <div>
     <b-navbar toggleable="lg" type="light" variant="white" id="nav_shadow">
 
-      <b-navbar-brand href="#" id="site_name" class="pl-3">Unibox</b-navbar-brand>
+      <b-navbar-brand id="site_name" class="pl-3" >
+        <router-link to="/" style="text-decoration: none; color: #707070;">
+          Unibox
+        </router-link>
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -11,7 +15,13 @@
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav id="text_style" class="pr-5">
             <b-nav-item href="#" class="px-3" right>FAQ</b-nav-item>
-            <b-nav-item href="#" class="px-3" right>About</b-nav-item>
+
+            <b-nav-item class="px-3" right>
+              <router-link to="about" style="text-decoration: none; color: #707070;"> 
+                About
+              </router-link>
+            </b-nav-item>
+
             <b-nav-item href="#" class="px-3" right>Download</b-nav-item>
           </b-navbar-nav>
         </b-navbar-nav>
@@ -22,6 +32,8 @@
 </template>
 
 <style>
+
+
 #site_name{
   font: italic normal bold 35px/42px Lato;
   letter-spacing: 0px;

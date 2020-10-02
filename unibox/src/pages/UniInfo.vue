@@ -1,7 +1,7 @@
 <template>
   <div id="app_bg">
     <b-container>
-      <div id="uni_name" class="py-5 ml-5">NIPTICT</div>
+      <div id="uni_name" class="py-5 ml-5" style="z-index:2">NIPTICT</div>
     </b-container>
     
 

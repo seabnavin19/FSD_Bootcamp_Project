@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../pages/Home.vue'
 import UniInfo from '../pages/UniInfo.vue'
-import ShowUni from '../pages/ShowUni.vue'
+import ComputerScience from '../pages/ComputerScience.vue'
+import InternalRelation from '../pages/InternalRelation'
+import Architecture from '../pages/Architecture'
 import About from '../pages/About.vue'
 
 Vue.use(VueRouter)
@@ -19,9 +21,19 @@ const routes = [
     component: UniInfo
   },
   {
-    path: '/uni',
-    name: 'ShowUni',
-    component: ShowUni
+    path: '/Computer Science',
+    name: 'ComputerScience',
+    component: ComputerScience
+  },
+  {
+    path: '/Internal Relation',
+    name: 'Internal Relation',
+    component: InternalRelation
+  },
+  {
+    path: '/Architecture',
+    name: 'Architecture',
+    component: Architecture
   },
   {
     path: '/about',

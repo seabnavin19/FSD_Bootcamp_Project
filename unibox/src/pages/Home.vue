@@ -1,29 +1,30 @@
 <template>
   <div class="homepage">
     <div
-      class="information_text row"
-      style="margin-top: 0px; margin-right: 0px; margin-left: 0px"
+      class="row h-100 justify-content-center align-items-center"
+      style="margin-top: 0px; margin-right: 0px; margin-left: 0px;"
     >
-      <div class="col col-6">
+      <div class="col-6">
         <p
-          class="text-dark font-weight-bold text-right"
-          style="font-size: 30px; margin-top: -100px"
+          class="text-dark font-weight-bold text-lg-right"
+          style="font-size: 30px"
         >
           Information in your hand...!
         </p>
       </div>
-      <div class="col col-3 d-flex" style="margin-top: -100px">
+      <div class="col-6">
         <div class="btn-group" style="height: 50px">
-          <b-dropdown
-            text="Select majors"
-            variant="success"
-            lg="4"
-            class="pb-2"
-          >
-            <b-dropdown-item-button>Major1</b-dropdown-item-button>
-            <b-dropdown-item href="/UniInfo">Major2</b-dropdown-item>
-            <b-dropdown-item-button>Major3</b-dropdown-item-button>
-          </b-dropdown>
+          <select v-on:change="changeRoute">
+            <option>Select Major</option>
+              <option 
+                v-for="(major, index) in majors"
+                v-bind:item="major"
+                v-bind:index="index"
+                v-bind:key="major._id" 
+                
+                > {{major.Major_Name}}
+              </option>
+          </select>
         </div>
       </div>
     </div>
@@ -32,9 +33,46 @@
 
 <script>
 
+import PostService from '../PostService'
+
 export default {
   name: "Home",
   components: {},
+  data(){
+    return{
+      majors:[],
+    }
+  },
+  async created(){
+    try{
+      this.majors = await PostService.getAllPosts();
+    }catch(err){
+      this.error = err.message;
+    }
+  },
+  // async created() {
+  //   PostService
+  //     .getAllPosts()
+  //     .then(res => {
+  //       this.majors = res.data;
+  //       console.log(this.majors);
+  //     })
+  //     .catch(err => console.error(err));
+  // },
+  methods:{
+    changeRoute(event){
+      if(event.target.value == 'Computer Science'){
+            this.$router.push({path: '/Computer Science' })
+        }
+        else if (event.target.value == 'Architecture'){
+            this.$router.push({path: '/Architecture' })
+        }else if (event.target.value == 'International Relation'){
+            this.$router.push({path: '/Internal Relation' })
+        }
+        
+    }
+  }
+  
 };
 </script>
 <style >
@@ -42,7 +80,8 @@ export default {
   max-width: 100%;
   background-size: cover;
   background-image: url('../assets/Home_page.jpg');
-  height: 100%;
+  /* background-repeat: no-repeat; */
+  height: 500px;
 }
 .information_text {
   padding-top: 33%;
