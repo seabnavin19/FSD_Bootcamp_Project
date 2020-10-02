@@ -1,29 +1,29 @@
 <template>
   <div id="app_bg">
     <b-container>
-      <div id="uni_name" class="py-5">Computer Science</div>
+      <div id="uni_name" class="py-5">Architecture</div>
     </b-container>
-    <b-container class="bv-example-row">
+    <b-container>
         <b-row>
-            <b-col>
+            <b-col >
                 <div  v-for="(major, index) in majors"
-                        v-bind:item="major"
-                        v-bind:index="index"
-                        v-bind:key="major._id"
+                      v-bind:item="major"
+                      v-bind:index="index"
+                      v-bind:key="major._id"
+                      
 
                 >
-                    <b-card
+                    <b-card 
                         id="card_title"
-                        img-src="https://picsum.photos/600/300/?image=25"
                         img-alt="Image"
                         img-top
                         tag="article"
-                        style="max-width: 20rem;"
                         class="mb-5 "
                         v-for="(university, index) in major.universities"
                         v-bind:item="universities"
                         v-bind:index="index"
                         v-bind:key="university._id"
+                        :img-src="university.Image"
                         :title="university.Name"
                        
                     >
@@ -53,6 +53,7 @@ import PostService from '../PostService'
     async created(){
       try{
         this.majors = await PostService.getPosts("Architecture");
+        console.log(this.majors)
       }catch(err){
         this.error = err.message;
       }

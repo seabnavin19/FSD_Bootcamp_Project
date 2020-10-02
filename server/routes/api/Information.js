@@ -1,6 +1,7 @@
 const express = require('express');
 const mongodb = require('mongodb');
 const router = express.Router();
+require('dotenv').config()
 
 // Get Information
 router.get('/', async (req, res) => {
@@ -10,9 +11,9 @@ router.get('/', async (req, res) => {
 
 async function loadCollection() {
     const client = await mongodb.MongoClient.connect(
-        'mongodb+srv://TeamVI:1234@teamvi.sqhgs.mongodb.net/TeamVI?retryWrites=true&w=majority', {
-            useNewUrlParser: true
-        }
+        process.env.DB_CONNECTION, {
+        useNewUrlParser: true
+    }
     );
     return client.db('MajorsInfo').collection('Majors');
 }

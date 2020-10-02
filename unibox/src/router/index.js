@@ -26,9 +26,9 @@ const routes = [
     component: ComputerScience
   },
   {
-    path: '/Internal Relation',
-    name: 'Internal Relation',
-    component: InternalRelation
+    path: '/International Relation',
+    name: 'International Relation',
+    component: InternalRelation 
   },
   {
     path: '/Architecture',

@@ -1,19 +1,28 @@
 <template>
   <div class="homepage">
-    <div
-      class="row h-100 justify-content-center align-items-center"
-      style="margin-top: 0px; margin-right: 0px; margin-left: 0px;"
-    >
+    <div class="row h-100 justify-content-center align-items-center">
+      
       <div class="col-6">
-        <p
-          class="text-dark font-weight-bold text-lg-right"
-          style="font-size: 30px"
-        >
+        <h1 class="text-dark font-weight-bold text-lg-right">
           Information in your hand...!
-        </p>
+        </h1>
       </div>
-      <div class="col-6">
-        <div class="btn-group" style="height: 50px">
+
+      <div>
+        <b-dropdown text="Select Major" variant="success">
+          <b-dropdown-item 
+            :to="major.Major_Name"
+            v-for="(major, index) in majors"
+            v-bind:item="major"
+            v-bind:index="index"
+            v-bind:key="major._id"
+            >{{major.Major_Name}}
+          </b-dropdown-item>
+        </b-dropdown>
+      </div>
+      
+      <!-- <div class="col-6">
+        <div class="btn-group" style="height: 50px;">
           <select v-on:change="changeRoute">
             <option>Select Major</option>
               <option 
@@ -26,15 +35,13 @@
               </option>
           </select>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-
 import PostService from '../PostService'
-
 export default {
   name: "Home",
   components: {},
@@ -50,28 +57,20 @@ export default {
       this.error = err.message;
     }
   },
-  // async created() {
-  //   PostService
-  //     .getAllPosts()
-  //     .then(res => {
-  //       this.majors = res.data;
-  //       console.log(this.majors);
-  //     })
-  //     .catch(err => console.error(err));
-  // },
-  methods:{
-    changeRoute(event){
-      if(event.target.value == 'Computer Science'){
-            this.$router.push({path: '/Computer Science' })
-        }
-        else if (event.target.value == 'Architecture'){
-            this.$router.push({path: '/Architecture' })
-        }else if (event.target.value == 'International Relation'){
-            this.$router.push({path: '/Internal Relation' })
-        }
+  // methods:{
+  //   changeRoute(event){
+  //     if(event.target.value == 'Computer Science'){
+  //       this.$router.push({path: '/Computer Science' })
+  //     }
+  //     else if (event.target.value == 'Architecture'){
+  //       this.$router.push({path: '/Architecture' })
+  //     }
+  //     else if (event.target.value == 'International Relation'){
+  //       this.$router.push({path: '/International Relation' })
+  //     }
         
-    }
-  }
+  //   }
+  // }
   
 };
 </script>
@@ -80,7 +79,6 @@ export default {
   max-width: 100%;
   background-size: cover;
   background-image: url('../assets/Home_page.jpg');
-  /* background-repeat: no-repeat; */
   height: 500px;
 }
 .information_text {
