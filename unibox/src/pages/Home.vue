@@ -6,7 +6,7 @@
     >
       <div class="col-6">
         <p
-          class="text-white font-weight-bold text-lg-right"
+          class="text-dark font-weight-bold text-lg-right"
           style="font-size: 30px"
         >
           Information in your hand...!
@@ -14,14 +14,16 @@
       </div>
       <div class="col-6">
         <div class="btn-group" style="height: 50px">
-          <select>
+          <select v-on:change="changeRoute">
             <option>Select Major</option>
-            <option
-              v-for="(major, index) in majors"
-              v-bind:item="major"
-              v-bind:index="index"
-              v-bind:key="major._id"
-            > {{major.Major_Name}} </option>
+              <option 
+                v-for="(major, index) in majors"
+                v-bind:item="major"
+                v-bind:index="index"
+                v-bind:key="major._id" 
+                
+                > {{major.Major_Name}}
+              </option>
           </select>
         </div>
       </div>
@@ -43,9 +45,31 @@ export default {
   },
   async created(){
     try{
-      this.majors = await PostService.getPosts();
+      this.majors = await PostService.getAllPosts();
     }catch(err){
       this.error = err.message;
+    }
+  },
+  // async created() {
+  //   PostService
+  //     .getAllPosts()
+  //     .then(res => {
+  //       this.majors = res.data;
+  //       console.log(this.majors);
+  //     })
+  //     .catch(err => console.error(err));
+  // },
+  methods:{
+    changeRoute(event){
+      if(event.target.value == 'Computer Science'){
+            this.$router.push({path: '/Computer Science' })
+        }
+        else if (event.target.value == 'Architecture'){
+            this.$router.push({path: '/Architecture' })
+        }else if (event.target.value == 'International Relation'){
+            this.$router.push({path: '/Internal Relation' })
+        }
+        
     }
   }
   
@@ -55,7 +79,12 @@ export default {
 .homepage {
   max-width: 100%;
   background-size: cover;
-  background-image: url("https://s3.amazonaws.com/stockfreedom/wp-content/uploads/2018/02/23164944/ti01104994-1560x1040.jpg");
+  /* background-image: url("https://s3.amazonaws.com/stockfreedom/wp-content/uploads/2018/02/23164944/ti01104994-1560x1040.jpg"); */
+  background-image: url('../assets/Home_page.jpg');
+  /* background-repeat: no-repeat; */
   height: 500px;
+}
+.information_text {
+  padding-top: 33%;
 }
 </style>
