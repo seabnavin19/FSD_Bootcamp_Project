@@ -55,7 +55,6 @@ export default {
   async created() {
     try {
       this.majors = await PostService.getPosts("Architecture");
-      console.log(this.majors);
     } catch (err) {
       this.error = err.message;
     }
