@@ -2,11 +2,15 @@
   <div>
     <b-navbar toggleable="lg" type="light" variant="white" id="nav_shadow">
 
+<<<<<<< HEAD
       <b-navbar-brand id="site_name" class="pl-3" >
         <router-link to="/" style="text-decoration: none; color: #707070;">
           Unibox
         </router-link>
       </b-navbar-brand>
+=======
+      <b-navbar-brand href="/" id="site_name" class="pl-3">Unibox</b-navbar-brand>
+>>>>>>> 5193a8477afcf5f6f00c6a24b0ed564fd7acb9c6
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

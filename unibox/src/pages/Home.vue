@@ -57,6 +57,7 @@ export default {
       this.error = err.message;
     }
   },
+<<<<<<< HEAD
   // methods:{
   //   changeRoute(event){
   //     if(event.target.value == 'Computer Science'){
@@ -68,6 +69,18 @@ export default {
   //     else if (event.target.value == 'International Relation'){
   //       this.$router.push({path: '/International Relation' })
   //     }
+=======
+  methods:{
+    changeRoute(event){
+      if(event.target.value == 'Computer Science'){
+            this.$router.push({path: '/Computer Science' })
+        }
+        else if (event.target.value == 'Architecture'){
+            this.$router.push({path: '/Architecture' })
+        }else if (event.target.value == 'International Relation'){
+            this.$router.push({path: '/Internal Relation' })
+        }
+>>>>>>> 5193a8477afcf5f6f00c6a24b0ed564fd7acb9c6
         
   //   }
   // }

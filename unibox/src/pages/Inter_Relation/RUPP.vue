@@ -1,20 +1,23 @@
 <template>
   <div id="app_bg">
     <b-container>
-      <div id="uni_name" class="py-5 ml-5" style="z-index:2">NIPTICT</div>
+      <div id="uni_name" class="py-5 ml-5 text-center" style="z-index:2">Royal University of Phnom Penh(RUPP)</div>
     </b-container>
     
-
-    <b-container class="w-50 mx-auto mt-5 pb-5">
+    <b-container class="w-50 mx-auto mt-5 pb-5"
+      v-for="(major, index) in majors"
+                        v-bind:item="major"
+                        v-bind:index="index"
+                        v-bind:key="major._id"
+    >
       <div class="accordion" role="tablist">
-        
         <b-card no-body class="mb-1">
           <b-card-header header-tag="header" class="p-1" role="tab">
             <b-button block v-b-toggle.accordion-1  class="mr-2">About University</b-button>
           </b-card-header>
           <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
-              <b-card-text>{{ aboutUni }}</b-card-text>
+              <b-card-text>{{major.uniAbout}}</b-card-text>
             </b-card-body>
           </b-collapse>
         </b-card>
@@ -25,7 +28,7 @@
           </b-card-header>
           <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
             <b-card-body>
-              <b-card-text>{{ program }}</b-card-text>
+              <b-card-text>{{major.uniProgramView}}</b-card-text>
             </b-card-body>
           </b-collapse>
         </b-card>
@@ -36,7 +39,7 @@
           </b-card-header>
           <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
             <b-card-body>
-              <b-card-text>{{ career }}</b-card-text>
+              <b-card-text>{{major.uniCareerPath }}</b-card-text>
             </b-card-body>
           </b-collapse>
         </b-card>
@@ -47,7 +50,7 @@
           </b-card-header>
           <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
             <b-card-body>
-              <b-card-text>{{ contact }}</b-card-text>
+              <b-card-text>{{ major.contact }}</b-card-text>
             </b-card-body>
           </b-collapse>
         </b-card>
@@ -57,34 +60,21 @@
 </template>
 
 <script>
-  export default {
+import PostService from '../../PostService'
+export default {
     data() {
       return {
-        aboutUni: `
-          NIPTICT is a research and training institute founded by the Ministry of Posts 
-          and Telecommunications of Cambodia (MPTC). Our mission is to develop highly qualified and committed professionals in the field of posts,
-          telecommunications and ICT who will play a leading role in the development of Cambodia and its integration into the ASEAN Economic Community.
-          `,
-        program:`
-          The Computer Science program emphasizes practical skills built on theoretical foundations.
-          Every course is designed to give students hands-on practices with up-to-date tools and frameworks.
-          The main areas include basic sciences, web and mobile applications, database management, big data analysis,
-          cloud computing, artificial intelligence, and work-readiness skills. With the implementation of a blended learning model, 
-          effective open content, and strong faculty-industry relationships, students will be prepared to demonstrate their knowledge to the greatest potential. 
-          Our courses are continually revised to stay on top of trends in programming languages, application development technologies, libraries, and hardware.
-          `,
-        career:`
-        Web and mobile developer ,
-        Database designer and administrator ,
-        Project manager ,
-        Technology entrepreneur ,
-        Digital innovator
-          `,
-        contact:`Tel: 010 340 000 ,
-        Email: info@niptict.edu.kh
-        `
+        majors:[],
+        universities:[],
       }
     },
+    async created(){
+      try{
+        this.majors = await PostService.getUniversity("International Relation","Royal University of Phnom Penh(RUPP)",1);
+      }catch(err){
+        this.error = err.message;
+      }
+    }
   }
 </script>
 
@@ -96,7 +86,7 @@
     opacity: 1;
   }
   #app_bg {
-    background-image: url('../assets/Info_page.jpg');
+    background-image: url('../../assets/Info_page.jpg');
     background-size: cover;
   }
 </style>
