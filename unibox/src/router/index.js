@@ -1,91 +1,91 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../pages/Home.vue'
-import PUC from '../pages/Inter_Relation/PUC.vue'
-import RUPP from '../pages/Inter_Relation/RUPP.vue'
-import PIU from '../pages/Architecture/PIU'
-import AUPP from '../pages/Architecture/AUPP'
-import PUC_ARC from '../pages/Architecture/PUC'
-import NU_ARC from '../pages/Architecture/NU'
-import PIU_Com from '../pages/Computer/PIU'
-import NITTICT_Com from '../pages/Computer/NITTICT'
-import RUPP_Com from '../pages/Computer/RUPP'
-import ComputerScience from '../pages/ComputerScience.vue'
-import InternalRelation from '../pages/InternalRelation'
-import Architecture from '../pages/Architecture'
-import About from '../pages/About.vue'
+// import Home from '../pages/Home.vue'
+// import PUC from '../pages/Inter_Relation/PUC'
+// import RUPP from '../pages/Inter_Relation/RUPP.vue'
+// import PIU from '../pages/Architecture/PIU'
+// import AUPP from '../pages/Architecture/AUPP'
+// import PUC_ARC from '../pages/Architecture/PUC'
+// import NU_ARC from '../pages/Architecture/NU'
+// import PIU_Com from '../pages/Computer/PIU'
+// import NIPTICT_Com from '../pages/Computer/NIPTICT'
+// import RUPP_Com from '../pages/Computer/RUPP'
+// import ComputerScience from '../pages/ComputerScience.vue'
+// import InternalRelation from '../pages/InternalRelation'
+// import Architecture from '../pages/Architecture'
+// import About from '../pages/About.vue'
 
 Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import("../pages/Home")
   },
   {
-    path: '/computer science/rupp',
-    name: 'RUPP',
-    component: RUPP_Com
+    path: '/Computer Science/Royal University of Phnom Penh(RUPP)',
+    name: 'RUPP_CS',
+    component: () => import("../pages/Computer/RUPP_CS")
   },
   {
-    path: '/computer science/nittict',
-    name: 'NITTICT',
-    component: NITTICT_Com
+    path: '/Computer Science/National Institute of Posts, Telecommunications and ICT(NIPTICT)',  
+    name: 'NIPTICT_CS',
+    component: () => import("../pages/Computer/NIPTICT_CS")
   },
   {
-    path: '/computer science/piu',
-    name: 'PIU',
-    component: PIU_Com
+    path: '/Computer Science/Paragon International University',
+    name: 'PIU_CS',
+    component: () => import("../pages/Computer/PIU_CS")
   },
   {
-    path: '/architecture/nu',
-    name: 'NU',
-    component: NU_ARC
+    path: '/Architecture/Norton University (NU)',
+    name: 'NU_ARC',
+    component: () => import("../pages/Architecture/NU_ARC")
   },
   {
-    path: '/architecture/puc',
-    name: 'PUC',
-    component: PUC_ARC
+    path: '/Architecture/Pannasastra University of Cambodia (PUC)',
+    name: 'PUC_ARC',
+    component: () => import("../pages/Architecture/PUC_ARC")
   },
   {
-    path: '/architecture/aupp',
-    name: 'AUPP',
-    component: AUPP
+    path: '/Architecture/American University of Phnom Penh (AUPP)',
+    name: 'AUPP_ARC',
+    component: () => import("../pages/Architecture/AUPP_ARC")
   },
   {
-    path: '/architecture/piu',
-    name: 'PIU',
-    component: PIU
+    path: '/Architecture/Paragon International University',
+    name: 'PIU_ARC',
+    component: () => import("../pages/Architecture/PIU_ARC")
   },
   {
-    path: '/interal relation/rupp',
-    name: 'RUPP',
-    component: RUPP
+    path: '/International Relation/Royal University of Phnom Penh(RUPP)',
+    name: 'RUPP_IR',
+    component: () => import("../pages/Inter_Relation/RUPP_IR")
   },
   {
-    path: '/interal relation/puc',
-    name: 'PUC',
-    component: PUC
+    path: '/International Relation/Pannasastra University of Cambodia%20(PUC)',
+    name: 'PUC_IR',
+    component: () => import("../pages/Inter_Relation/PUC_IR")
   },
   {
     path: '/Computer Science',
     name: 'ComputerScience',
-    component: ComputerScience
+    component: () => import("../pages/ComputerScience")
   },
   {
     path: '/International Relation',
     name: 'International Relation',
-    component: InternalRelation 
+    component: () => import("../pages/InternalRelation")
   },
   {
     path: '/Architecture',
     name: 'Architecture',
-    component: Architecture
+    component: () => import("../pages/Architecture")
   },
   {
     path: '/about',
     name: 'About',
-    component: About
+    component: () => import("../pages/About")
   },
 ]
 
