@@ -7,6 +7,7 @@ module.exports = {
             '/api': {
                 target: 'http://localhost:4000'
             }
-        }
+        },
+        historyApiFallback: true
     }
 }
