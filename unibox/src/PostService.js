@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:4000/api/MajorsInfo';
+const url = '/api/MajorsInfo';
+
 
 class PostService {
       // Get Posts
