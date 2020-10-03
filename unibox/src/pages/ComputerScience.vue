@@ -30,7 +30,7 @@
               </b-card-text>
 
               <b-button
-                :to="`${university.Name}/`"
+                :to="university.Name"
                 variant="success"
                 >See more</b-button
               >

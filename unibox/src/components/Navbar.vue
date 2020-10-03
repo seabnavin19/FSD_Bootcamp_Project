@@ -13,7 +13,7 @@
             <b-nav-item href="#" class="px-3" right>FAQ</b-nav-item>
 
             <b-nav-item class="px-3" right>
-              <router-link to="about" style="text-decoration: none; color: #707070;"> 
+              <router-link to="/about" style="text-decoration: none; color: #707070;"> 
                 About
               </router-link>
             </b-nav-item>
