@@ -1,10 +1,10 @@
 <template>
   <div id="about_page">
-    <b-container class="mr-5">
-      <div id="title" class="py-5 ml-5">About Us</div>
+    <b-container class="">
+      <div id="title" class="py-5 text-center">About Us</div>
     </b-container>
 
-    <b-container class="bv-example-row mb-5 mr-5">
+    <b-container class="bv-example-row mb-5">
       <b-row class="justify-content-md-center">
         <b-col cols="12" md="auto">
           <div>
@@ -131,7 +131,5 @@
 #title {
   font: normal normal bold 40px/48px Lato;
   letter-spacing: 0px;
-  color: #707070;
-  opacity: 1;
 }
 </style>

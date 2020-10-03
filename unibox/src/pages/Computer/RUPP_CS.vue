@@ -1,7 +1,7 @@
 <template>
   <div id="app_bg">
     <b-container>
-      <div id="uni_name" class="py-5 ml-5 text-center" style="z-index:2">Royal University of Phnom Penh (RUPP)</div>
+      <div id="uni_name" class="py-5 ml-5 text-center" style="z-index:2">Royal University of Phnom Penh</div>
     </b-container>
     
     <b-container class="w-50 mx-auto mt-5 pb-5"
@@ -82,8 +82,7 @@ export default {
   #uni_name{
     font: normal normal bold 40px/48px Lato;
     letter-spacing: 0px;
-    color: #707070;
-    opacity: 1;
+    color: black;
   }
   #app_bg {
     background-image: url('../../assets/Info_page.jpg');
