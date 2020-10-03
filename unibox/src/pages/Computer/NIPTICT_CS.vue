@@ -1,7 +1,7 @@
 <template>
   <div id="app_bg">
     <b-container>
-      <div id="uni_name" class="py-5 ml-5 text-center" style="z-index:2">National Institute of Posts, Telecommunications and ICT(NIPTICT)</div>
+      <div id="uni_name" class="py-5 ml-5 text-center" style="z-index:2">National Institute of Posts, Telecommunications and ICT (NIPTICT)</div>
     </b-container>
     
     <b-container class="w-50 mx-auto mt-5 pb-5"
