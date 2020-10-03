@@ -1,10 +1,10 @@
 <template>
   <div id="app_bg">
     <b-container>
-      <div id="uni_name" class="py-5 ml-5 text-center" style="z-index:2">American University of Phnom Penh (AUPP)</div>
+      <div id="uni_name" class="py-5 ml-5 text-center" style="z-index:2">American University of Phnom Penh</div>
     </b-container>
     
-    <b-container class="w-50 mx-auto mt-5 pb-5"
+    <b-container class="col col-lg-5 col-md-6 col-sm-7 mx-auto mt-5 pb-5"
       v-for="(major, index) in majors"
                         v-bind:item="major"
                         v-bind:index="index"
@@ -82,8 +82,7 @@ export default {
   #uni_name{
     font: normal normal bold 40px/48px Lato;
     letter-spacing: 0px;
-    color: #707070;
-    opacity: 1;
+    color: black;
   }
   #app_bg {
     background-image: url('../../assets/Info_page.jpg');
